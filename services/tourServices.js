@@ -26,7 +26,7 @@ module.exports.getSingleIdService = async (tourId) => {
 
 module.exports.updateTourService = async (tourId, tourDetails) => {
      const result  = await Tour.updateOne({_id: tourId}, {$set: tourDetails},{
-        runValidators: true
+        runValidators: true,
      })
 
  return result 
