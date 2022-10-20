@@ -108,7 +108,7 @@ module.exports.trendingCount = async (req, res) => {
     
     if(req.query.limit){
         const { limit = 3 } = req.query;
-        queries.limit = limit;
+        queries.limit = limit
     }
 
       const result = await trendingCountService(filters, queries);

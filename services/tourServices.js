@@ -29,7 +29,7 @@ module.exports.updateTourService = async (tourId, tourDetails) => {
         runValidators: true,
      })
 
- return result 
+ return result
 }
 
 module.exports.trendingCountService = async () => {
