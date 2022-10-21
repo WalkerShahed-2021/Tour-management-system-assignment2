@@ -41,7 +41,6 @@ module.exports.getAllTours = async (req, res, next) => {
 module.exports.createATour = async (req, res, next) => {
   try {
     const result = await createATourService(req.body);
-    console.log(result);
     res.status(200).json({
       status: "Success",
       message: "Successfuly created data",
