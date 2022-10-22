@@ -13,14 +13,10 @@ mongoose.connect(process.env.LOCAL_DATABASE).then(() => {
 
 const port = process.env.PORT || 5000;
 
-app.listen(port, () => {
-    console.log(`App is running on port ${port}`);
-})
 
 app.get("/", (req, res) => {
     res.send("Tour Management Route Working")
 })
-
 
 const tourRoute = require("./routes/tours.routes");
 
@@ -29,4 +25,8 @@ app.use("/api/v1/tour", tourRoute)
 
 app.all("*", (req, res) => {
     res.send("No Route Found")
+})
+
+app.listen(port, () => {
+    console.log(`App is running on port ${port}`);
 })
